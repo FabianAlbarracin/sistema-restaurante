@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    environment {
+        PYTHON_EXE = 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
+    } 
     stages {
         stage('Preparar entorno') {
             steps {
