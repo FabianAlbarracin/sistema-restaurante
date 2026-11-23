@@ -18,6 +18,6 @@ def calcular_total(productos):
         if cantidad <= 0:
             raise ValueError("La cantidad debe ser mayor que cero")
 
-        total += precio * cantidad
+        total += precio  # Error intencional: omite multiplicar por cantidad
 
     return total
