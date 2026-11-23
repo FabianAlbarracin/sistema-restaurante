@@ -3,17 +3,18 @@ pipeline {
 
     environment {
         PYTHON_EXE = 'C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
-    } 
+    }
+
     stages {
         stage('Preparar entorno') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                bat "\"${PYTHON_EXE}\" -m pip install -r requirements.txt"
             }
         }
 
         stage('Ejecutar pruebas') {
             steps {
-                bat 'python -m pytest -v'
+                bat "\"${PYTHON_EXE}\" -m pytest -v"
             }
         }
 
